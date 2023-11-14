@@ -1,0 +1,527 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+$darkest-blue: #1a237e;
+$darker-blue: #283593;
+$dark-blue: #303f9f;
+$medium-blue: #3949ab;
+$light-blue: #3f51b5;
+$lighter-blue: #5c6bc0;
+$lightest-blue: #9fa8da;
+$white: #ffffff;
+$black: #0e1442;
+$orange: #ffb300;
+$yellow: #fdd835;
+$dark-pink: #ad1457;
+$light-pink: #d81b60;
+
+
+* {
+  outline: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #ffffff;
+  cursor: default;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  transition-duration: 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  color: #02353C;
+  margin: 10px, 0;
+  
+  font-size: 1.25em;
+}
+
+.resume {
+  width: 960px;
+  background: #E2FFFA;
+  color: #ffffff;
+  margin: 10px auto;
+  box-shadow: 10px 10px  #02353C;
+  position: relative;
+  display: flex;
+}
+.resume .base,
+.resume .func {
+  box-sizing: border-box;
+  float: left;
+}
+.resume .base > div,
+.resume .func > div {
+  padding-bottom: 10px;
+}
+.resume .base > div:last-of-type,
+.resume .func > div:last-of-type {
+  padding-bottom: 0;
+}
+.resume .base {
+  width: 45%;
+  padding: 30px 15px;
+  background: #C1F6ED;
+  color: #404040; 
+}
+.resume .base .profile {
+  background:  #02353C;
+  height: 350px;
+  padding: 30px 15px 40px 15px;
+  margin: -30px -15px 45px -15px;
+  position: relative;
+  z-index: 2;
+}
+.resume .base .profile::after {
+  content: "";
+  position: absolute;
+  background: #412007;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.resume .base .profile .photo img {
+	height:215px;
+	width: 210px;
+	border-radius: 100%;
+	margin: 2px auto;
+  background-size: 200px 200px;
+}
+.resume .base .profile .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume .base .profile .fa-rocket {
+  font-size: 100px;
+  text-align: center;
+  margin: auto;
+  color: #283593;
+}
+.resume .base .profile .info {
+  text-align: center;
+  color: #0e1442;
+}
+.resume .base .profile .info .name {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: #C1F6ED;
+  font-weight: 2600;
+}
+.resume .base .profile .info .job {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.3em;
+  color: #ffffff;
+}
+.resume .base .about h3{
+  margin-bottom: 5px;
+  font-size: 1.4em;
+}
+.resume .base .about .about1{
+   margin: 5px;
+   font-size: 18px;
+}
+.resume .base .about div:hover span {
+  color: #0C6F5B;
+  font-weight: bold;
+}
+.resume .base .about div:hover span::after {
+  width: 100%;
+  
+}
+.resume .base .contact h3{
+  margin-bottom: 5px;
+  font-size: 1.3em;
+}
+.resume .base .contact div {
+  line-height: 28px;
+}
+.resume .base .contact div a:hover {
+  color: #0C6F5B;
+}
+.resume .base .contact div a:hover span::after {
+  width: 100%;
+}
+.resume .base .contact div:hover i {
+  color: #02353C;
+}
+.resume .base .contact div i {
+  color: #0C6F5B;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+.resume .base .contact div span {
+  position: relative;
+  color:#000000;
+  font-size: 18px;
+  
+}
+.resume .base .contact div:hover span {
+  color: #0C6F5B;
+  font-weight: bold;
+}
+.resume .base .contact div span::after {
+  content: "";
+  position: absolute;
+  background: #0C6F5B;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+.resume .base .follow h3{
+  margin-bottom: 5px;
+  font-size: 1.4em;
+}
+.resume .base .follow .tt div i{
+  color: #0C6F5B;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+.resume .base .follow .tt div span {
+  position: relative;
+  color:#000000;
+  font-size: 18px;
+  text-align: center ;
+}
+.resume .base .follow .tt div:hover span {
+  color: #0C6F5B;
+  font-weight: bold;
+}
+.resume .base .contact div span::after {
+  content: "";
+  position: absolute;
+  background: #0C6F5B;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+.resume .base .follow .tt div:hover i {
+  color: #02353C;
+}
+.resume .base .aim h3{
+  margin-bottom: 5px;
+  font-size: 1.4em
+}
+.resume .base .aim .mt {
+  margin: 5px;
+  font-size: 18px;
+}
+.resume .base .aim  div:hover span {
+  color: #0C6F5B;
+  font-weight: bold;
+}
+.resume .base .aim  div:hover span::after {
+  width: 100%;
+  
+}
+.resume .func {
+  width: 100%;
+  padding: 30px;
+}
+.resume .func:hover > div {
+  transition-duration: 0.5s;
+}
+.resume .func:hover > div:hover h3 i {
+  transform: scale(1.25);
+}
+.resume .func:hover > div:not(:hover) {
+  opacity: 0.5;
+}
+.resume .func h3 {
+  transition-duration: 0.3s;
+  margin-top: 0;
+}
+.resume .func h3 i {
+  color: #000000 ;
+  background: #ffffff;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  line-height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition-duration: 0.3s;
+}
+.resume .func h3 span {
+  color:#ffffff;
+  font-size: 23px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+.resume .func .edu {
+  float: left ;
+}
+.resume .func .edu small {
+  display: block;
+  opacity: 0.7;
+  color: #ffffff;
+}
+.resume .func .edu ul li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  color: #C1F6ED;
+}
+.resume .func .work ul li:hover::before,
+.resume .func .edu ul li:hover::before {
+  animation: circle 1.2s infinite;
+}
+.resume .func .work ul li:hover span,
+.resume .func .edu ul li:hover span {
+  color: #ffffff;
+  font-weight: bold;
+}
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #fdd835;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
+}
+.resume .func .work ul li:first-of-type::before,
+.resume .func .edu ul li:first-of-type::before {
+  width: 10px;
+  height: 10px;
+  left: 1px;
+}
+.resume .func .work ul li:last-of-type,
+.resume .func .edu ul li:last-of-type {
+  padding-bottom: 3px;
+}
+.resume .func .work ul li:last-of-type::after,
+.resume .func .edu ul li:last-of-type::after {
+  border-radius: 1.5px;
+}
+.resume .func .work ul li::before,
+.resume .func .work ul li::after,
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.resume .func .work ul li::before,
+.resume .func .edu ul li::before {
+  width: 7px;
+  height: 7px;
+  border: 3px solid #ffffff;
+  background: #ffb300;
+  border-radius: 50%;
+  left: 3px;
+  z-index: 1;
+}
+.resume .func .work ul li::after,
+.resume .func .edu ul li::after {
+  width: 3px;
+  height: 100%;
+  background: #ffffff;
+  left: 5px;
+  top: 0;
+}
+.resume .func .work ul li span,
+.resume .func .edu ul li span {
+  transition-duration: 0.3s;
+}
+.resume .func .edu {
+  width: 100%;
+  background: #02353C;
+  padding: 15px;
+  margin: 0 4% 15px 0;
+}
+.resume .func .skills-prog .box {
+  text-align: center;
+  vertical-align: middle;
+}
+.resume .func .skills-prog {
+  clear: both;
+  background: #02353C;
+  padding: 15px;
+}
+.resume .func .skills-prog .box a {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.resume .func .skills-prog .box a:hover i {
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+  transform: rotate(45deg) scale(0.8);
+}
+.resume .func .skills-prog .box a:hover i::before {
+  transform: rotate(-45deg) scale(1.5);
+}
+.resume .func .skills-prog .box i {
+  display:inline-block;
+  font-size: 55px;
+  background: #ffffff;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  line-height: 110px; 
+  color: #0C6F5B;
+  margin: 0 35px 20px 30px;
+  transition-duration: 0.1s;
+}
+.resume .func .skills-prog .box i::before {
+  transition-duration: 0.3s;
+}
+.resume .func .skills-prog .box i.fa::before {
+  display: block;
+}
+.resume .func .skills-soft {
+  clear: both;
+  background: #02353C;
+  padding: 15px;
+  margin: 15px 0 0;
+}
+.resume .func .skills-soft ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.resume .func .skills-soft ul li {
+  position: relative;
+}
+.resume .func .skills-soft ul li:hover svg .cbar {
+  stroke: #000000;
+  stroke-width: 4px;
+}
+.resume .func .skills-soft ul li:hover span {
+  transform: scale(1.3);
+  color:#ffffff;
+}
+.resume .func .skills-soft ul li:hover small {
+  transform: scale(0.8);
+  color:#ffffff;
+}
+.resume .func .skills-soft ul li svg {
+  width: 95%;
+  fill: transparent;
+  transform: rotate(-90deg);
+  
+}
+.resume .func .skills-soft ul li svg circle {
+  stroke-width: 1px;
+  stroke: #ffffff;
+}
+.resume .func .skills-soft ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: #C1F6ED;
+  stroke-linecap: round;
+}
+.resume .func .skills-soft ul li span,
+.resume .func .skills-soft ul li small {
+  position: absolute;
+  display: block;
+  font-size: 15px;
+  width: 100%;
+  top: 55%;
+  transition-duration: 0.3s;
+  color: #ffffff;
+  font-weight: bold;
+}
+.resume .func .skills-soft ul li small {
+  color: #02353C;
+}
+.resume .func .skills-soft ul li span {
+  top: 40%;
+}
+
+.resume .func .interests {
+  background: #02353C;
+  margin: 15px 0 0;
+  padding: 15px;
+}
+.resume .func .interests-items {
+  box-sizing: border-box;
+  padding: 0 0 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.resume .func .interests-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.resume .func .interests-items div:hover i {
+  transform: scale(1.2);
+  color: #ffffff;
+  
+}
+.resume .func .interests-items div:hover span {
+  color: #C1F6ED;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+.resume .func .interests-items div i {
+  font-size: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #96f9ea;
+  transition-duration: 0.3s;
+}
+.resume .func .interests-items div span {
+  display: block;
+}
+
+
+
+
